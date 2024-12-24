@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.0"/>
+  <object class="GtkWindow" id="window">
+    <property name="title">GTK+ 계산기</property>
+    <property name="default-width">250</property>
+    <property name="default-height">250</property>
+    <property name="border-width">10</property>
+    <signal name="destroy" handler="gtk_main_quit"/>
+
+    <child>
+      <object class="GtkBox" id="vbox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+
+        <!-- Entry Field -->
+        <child>
+          <object class="GtkEntry" id="entry">
+            <property name="halign">end</property>
+            <property name="width-request">200</property>
+            <property name="height-request">50</property>
+            <property name="editable">false</property>
+          </object>
+        </child>
+
+        <!-- Button Grid -->
+        <child>
+          <object class="GtkGrid" id="grid">
+            <property name="row-spacing">5</property>
+            <property name="column-spacing">5</property>
+
+            <!-- Buttons Row 1 -->
+            <child>
+              <object class="GtkButton" id="button_7">
+                <property name="label">7</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_8">
+                <property name="label">8</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_9">
+                <property name="label">9</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_plus">
+                <property name="label">+</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">3</property>
+                <property name="top-attach">0</property>
+              </packing>
+            </child>
+
+            <!-- Buttons Row 2 -->
+            <child>
+              <object class="GtkButton" id="button_4">
+                <property name="label">4</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_5">
+                <property name="label">5</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_6">
+                <property name="label">6</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_minus">
+                <property name="label">-</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">3</property>
+                <property name="top-attach">1</property>
+              </packing>
+            </child>
+
+            <!-- Buttons Row 3 -->
+            <child>
+              <object class="GtkButton" id="button_1">
+                <property name="label">1</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_2">
+                <property name="label">2</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_3">
+                <property name="label">3</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_multiply">
+                <property name="label">*</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">3</property>
+                <property name="top-attach">2</property>
+              </packing>
+            </child>
+
+            <!-- Buttons Row 4 -->
+            <child>
+              <object class="GtkButton" id="button_clear">
+                <property name="label">C</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_0">
+                <property name="label">0</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_equals">
+                <property name="label">=</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">2</property>
+                <property name="top-attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="button_divide">
+                <property name="label">/</property>
+                <signal name="clicked" handler="on_button_clicked"/>
+              </object>
+              <packing>
+                <property name="left-attach">3</property>
+                <property name="top-attach">3</property>
+              </packing>
+            </child>
+
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
